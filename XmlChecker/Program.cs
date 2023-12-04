@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using XmlChecker.Checker;
+IXmlHandler handler = new XmlHandler();
+List<string> list = new List<string>();
+while (true)
+{
+    Console.WriteLine("");
+    Console.WriteLine("XML Checker, please input your xml ");
+    string tag = Console.ReadLine();
+    Console.WriteLine($"Result   ==>  {handler.DetermineXml(tag)}");
+}
